@@ -1,6 +1,9 @@
 <html>
 
 <head>
+<script src="parsley.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -10,55 +13,54 @@
 
         <p class="contact"><label for="name"> First Name</label></p>
 
-        <input id="name" name="name" placeholder="First Name" tabindex="1" type="text" required="">
+        <input id="name" name="name" placeholder="First Name" tabindex="1" type="text" required="" data-parsley-required-message="Please enter your First Name">
 
 
         <p class="contact"><label for="name"> Last Name</label></p>
 
-        <input id="name" name="name" placeholder="Last Name" tabindex="1" type="text" required="">
+        <input id="name" name="name" placeholder="Last Name" tabindex="1" type="text" required="" data-parsley-required-message="Please enter your Last Name">
 
         <p class="contact"><label for="email">Email</label></p>
 
-        <input required="" id="email" name="email" placeholder="example@domain.com" type="email" data-parsley-type="email">
+        <input required="" id="email" name="email" placeholder="example@domain.com" type="email" data-parsley-type="email" data-parsley-trigger="change" data-parsley-required-message="Please enter a valid email!!!">
 
 
 
         <p class="contact"><label for="username">Create a username</label></p>
 
-        <input required="" id="username" name="username" placeholder="username" tabindex="2" type="text">
+        <input required="" id="username" name="username" placeholder="username" tabindex="2" type="text" data-parsley-required-message="UserName required">
 
 
 
         <p class="contact"><label for="password">Create a password</label></p>
 
-        <input required="" type="password" id="password" name="password" type="text" data-parsley-minlength="8">
+        <input required="" type="password" id="password" name="password" type="text" data-parsley-minlength="8" data-parsley-trigger="change" data-parsley-required-message="Password required">
 
         <p class="contact"><label for="repassword">Confirm your password</label></p>
 
-        <input required="" type="password" id="password" name="password" type="text" data-parsley-minlength="8">
+        <input required="" type="password" id="password" name="password" type="text" data-parsley-minlength="8" data-parsley-trigger="change" data-parsley-required-message="Password required">
 
 
         <label>Date of Birth</label>
         <input required="" type="date" name="bday">
 
-        <label>Gender</label>
-        <select class="style gender textarea" name="gender">
-
-            <option></option>
-            
-            <option value="m">Male</option>
-
-            <option value="f">Female</option>
-
+         <label for="gender">Gender</label>
+            <p>
+                Male: <input type="radio" name="gender" id="genderM" value="M" required="">
+                Female: <input type="radio" name="gender" id="genderF" value="F">
+            </p>
             
 
-            </select><br><br>
 
 
+        <p class="contact"><label for="phone">Contact Number</label></p>
 
-        <p class="contact"><label for="phone">Mobile phone</label></p>
-
-        <input id="phone" name="phone" placeholder="phone number" type="text"> <br>
+        <input data-parsley-required="true" id="phone" name="phone" placeholder="phone number" type="text" data-parsley-minlength="10" data-parsley-trigger="change"> <br>
+        
+            <p>
+            <label for="message">Message (20 chars min, 100 max) :</label>
+            <textarea id="message" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 character comment.." data-parsley-validation-threshold="10"></textarea>
+            </p>
 
         <input class="button" name="submit" id="submit" tabindex="5" value="validate" type="submit">
 
