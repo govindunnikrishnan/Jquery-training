@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+
+    <link href="site.css" rel="stylesheet" />
+    <!-- Load jQuery and the validate plugin -->
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :jquery %>
+    <%= javascript_include_tag :parsley %>
+    <%= javascript_include_tag :all %>
+ 
+  </head>
+
+  
+    <%= yield %>
+  </body>
+</html>

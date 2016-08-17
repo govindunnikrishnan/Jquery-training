@@ -1,0 +1,70 @@
+<html>
+
+<head>
+</head>
+<body>
+
+<div class="form">
+
+    <form id="contactform" data-parsley-validate="">
+
+        <p class="contact"><label for="name"> First Name</label></p>
+
+        <input id="name" name="name" placeholder="First Name" tabindex="1" type="text" required="">
+
+
+        <p class="contact"><label for="name"> Last Name</label></p>
+
+        <input id="name" name="name" placeholder="Last Name" tabindex="1" type="text" required="">
+
+        <p class="contact"><label for="email">Email</label></p>
+
+        <input required="" id="email" name="email" placeholder="example@domain.com" type="email" data-parsley-type="email">
+
+
+
+        <p class="contact"><label for="username">Create a username</label></p>
+
+        <input required="" id="username" name="username" placeholder="username" tabindex="2" type="text">
+
+
+
+        <p class="contact"><label for="password">Create a password</label></p>
+
+        <input required="" type="password" id="password" name="password" type="text" data-parsley-minlength="8">
+
+        <p class="contact"><label for="repassword">Confirm your password</label></p>
+
+        <input required="" type="password" id="password" name="password" type="text" data-parsley-minlength="8">
+
+
+        <label>Date of Birth</label>
+        <input required="" type="date" name="bday">
+
+        <label>Gender</label>
+        <select class="style gender textarea" name="gender">
+
+            <option></option>
+            
+            <option value="m">Male</option>
+
+            <option value="f">Female</option>
+
+            
+
+            </select><br><br>
+
+
+
+        <p class="contact"><label for="phone">Mobile phone</label></p>
+
+        <input id="phone" name="phone" placeholder="phone number" type="text"> <br>
+
+        <input class="button" name="submit" id="submit" tabindex="5" value="validate" type="submit">
+
+    </form>
+
+</div>
+
+</body>
+</html>
