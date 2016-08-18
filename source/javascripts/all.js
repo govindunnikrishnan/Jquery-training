@@ -40,3 +40,28 @@ Dropzone.options.myAwesomeDropzone = {
         } else { done(); }
     }
 };
+
+
+function loadDoc() {
+    Pace.restart();
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            document.getElementById("demo").innerHTML = xhttp.responseText;
+        }
+    };
+    xhttp.open("GET", "ajax_training.txt", true);
+    xhttp.send();
+}
+
+paceOptions = {
+
+    ajax: true, // Monitors all ajax requests on the page
+
+    document: false, // Checks for the existance of specific elements on the page
+
+    eventLag: false, // Checks the document readyState
+
+
+
+};
